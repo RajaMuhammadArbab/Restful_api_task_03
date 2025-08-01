@@ -2,7 +2,7 @@ CREATE DATABASE blog_api;
 USE blog_api;
 
 
-CREATE TABLE IF NOT EXISTS posts (
+CREATE TABLE posts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,

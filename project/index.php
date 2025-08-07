@@ -8,7 +8,7 @@ function sanitize($data) {
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Clean URI path
+
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $script_name = dirname($_SERVER['SCRIPT_NAME']);
 $path = str_replace($script_name, '', $uri);
@@ -19,7 +19,7 @@ $resource = $segments[0] ?? null;
 $id = $segments[1] ?? null;
 
 
-// Only allow /posts
+
 if ($resource !== 'posts') {
     http_response_code(404);
     echo json_encode(['error' => 'Invalid endpoint']);
